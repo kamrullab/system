@@ -1,50 +1,45 @@
-/* Global styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+/* Colorful gradients */
+.bg-gradient {
+    background: linear-gradient(135deg, #e44d26 0%, #f16529 50%, #fefefe 100%);
 }
 
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #000000 100%);
+}
+
+/* Section Title */
 h2.section-title {
     font-size: 2.2rem;
     font-weight: bold;
     color: #333;
-    border-bottom: 3px solid #e8491d;
-    padding-bottom: 10px;
+    border-left: 8px solid #e44d26;
+    padding-left: 15px;
     margin-bottom: 20px;
 }
 
+/* Pre */
 pre {
-    background: #f8f9fa;
-    color: #343a40;
+    background: #e8e8e8;
+    color: #333;
     padding: 15px;
     font-size: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-ul.list-group li {
-    background: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-}
-
-ul.list-group li:hover {
-    background-color: #f7f7f7;
-}
-
+/* Buttons */
 .btn-lg {
     font-size: 1.5rem;
     padding: 15px 30px;
 }
 
-/* Footer */
+/* Footer Social Icons */
 footer .social-icons a {
     transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    color: #e8491d;
+    color: #f16529;
 }
 
 /* Responsive adjustments */
