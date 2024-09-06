@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamrul Hossain">
+    <meta name="description" content="Comprehensive System Information Script">
+    <title>Comprehensive System Info Script</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to copy command to clipboard
+        function copyCommand() {
+            const command = `
+systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name, maxclockspeed,architecture,numberofcores,numberoflogicalprocessors,loadpercentage, currentvoltage, l2cachesize, l3cachesize & wmic diskdrive get model, size, status, pnpdeviceid, partitions & wmic memorychip get capacity, manufacturer, speed, partnumber & wmic baseboard get manufacturer, product, version, serialnumber & wmic path win32_videocontroller get caption, adapterram, driverversion, driverdate, name, videoprocessor & wmic nic get name, macaddress, speed, manufacturer, packetsreceived, packetssent & wmic sounddev get caption, manufacturer & wmic path Win32_Battery get Name, EstimatedChargeRemaining, BatteryStatus, DesignCapacity, FullChargeCapacity, Voltage, ExpectedBatteryLife, TimeToFullCharge & wmic csproduct get identifyingnumber, uuid & wmic logicaldisk get description,filesystem,freespace,size,volumename & wmic path Win32_USBController get DeviceID,Name, Manufacturer, status & wmic os get caption,serialnumber,version,buildnumber,installdate, lastbootuptime, numberofprocesses & wmic computersystem get manufacturer, model, systemtype, systemfamily, totalphysicalmemory, domain, partofdomain, powersupplystate & wmic bootconfig get caption & wmic os get bootdevice, lastbootuptime, localdatetime, servicepackmajorversion & wmic computersystem get powerstate, status, thermalstate & wmic path win32_bios get biosversion, smbiosbiosversion, currentvoltage & wmic qfe get hotfixid, description, installedon & wmic path win32_temperatureprobe get currentreading & wmic path win32_process get processid, name, threadcount, workingsetsize & wmic path win32_usbhub get deviceid, status & wmic path win32_portconnector get connectorpinout, internalreference & wmic path win32_networkadapter get description, macaddress, speed, netconnectionid & wmic path win32_physicalmedia get serialnumber
+            `;
+            navigator.clipboard.writeText(command.trim()).then(() => {
+                alert("Command copied to clipboard!");
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Comprehensive System Information Script</h1>
+        <p>Created by Kamrul Hossain</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#system-information-extracted">System Information Extracted</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#redirecting-output">Redirecting Output</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#license">License</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>This script works on <strong>Windows</strong> operating systems. You need <strong>Administrator privileges</strong> to access all system details. The script utilizes WMIC (Windows Management Instrumentation Command-line).</p>
+            <h3>How to Use</h3>
+            <ol>
+                <li>Press <code>Ctrl + R</code> on your keyboard to open the <strong>Run</strong> dialog box.</li>
+                <li>Type <code>cmd</code> and press <strong>Enter</strong> to open the Command Prompt.</li>
+                <li>Right-click on the Command Prompt icon and select <strong>"Run as Administrator"</strong> for full access.</li>
+                <li>Click the button below to copy the command.</li>
+            </ol>
+            <button onclick="copyCommand()">Copy Command</button>
+        </section>
+
+        <section id="system-information-extracted">
+            <h2>System Information Extracted</h2>
+            <ul>
+                <li><strong>CPU Information:</strong> CPU Name, Maximum Clock Speed, Architecture, Number of Physical Cores, Logical Processors, Voltage, L2 and L3 Cache Sizes.</li>
+                <li><strong>Memory Information:</strong> RAM Capacity, Speed, Manufacturer, Part Number.</li>
+                <li><strong>Disk Information:</strong> Disk Model, Size, Status, Partitions, Plug and Play Device ID, Volume Name, Serial Number.</li>
+                <li><strong>BIOS Information:</strong> BIOS Release Date, Serial Number, Version, Current BIOS Voltage.</li>
+                <li><strong>Graphics Information:</strong> GPU Name, Adapter RAM, Driver Version, Video Processor.</li>
+                <li><strong>Battery Information:</strong> Battery Name, Charge Percentage, Design Capacity, Full Charge Capacity, Expected Battery Life, Time to Full Charge.</li>
+                <li><strong>Network Information:</strong> Adapter Name, Speed, MAC Address, Packets Sent/Received.</li>
+                <li><strong>USB Information:</strong> USB Device ID, Manufacturer, Status.</li>
+                <li><strong>Hotfix and Update Information:</strong> Hotfix ID, Description, Installed On (Date).</li>
+                <li><strong>Process Information:</strong> Process Name, ID, Thread Count, Memory Usage.</li>
+                <li><strong>Miscellaneous:</strong> System Manufacturer, Model, Type, Last Boot Time, Boot Device, Thermal State.</li>
+            </ul>
+        </section>
+
+        <section id="redirecting-output">
+            <h2>Redirecting Output</h2>
+            <p>To save the output to a text file, run the following command:</p>
+            <pre><code>scriptname.bat > systeminfo.txt</code></pre>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>Kamrul Hossain</strong></p>
+            <p>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
+        </section>
+
+        <section id="license">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more details.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kamrul Hossain - All rights reserved</p>
+    </footer>
+
+</body>
+</html>
