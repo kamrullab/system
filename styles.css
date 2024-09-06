@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     margin: 0;
@@ -8,62 +8,95 @@ body {
     color: #333;
 }
 
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
 header {
     background: #333;
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #e8491d;
+    margin-top: 10px;
 }
 
+/* Navigation */
 nav {
     background: #35424a;
-    text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
+    text-align: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
+    text-transform: uppercase;
     text-decoration: none;
+    padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background: #e8491d;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
+/* Main content */
 main {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 section h2 {
-    color: #35424a;
-    font-size: 2rem;
+    color: #333;
+    font-size: 2.5rem;
     margin-bottom: 15px;
+    position: relative;
 }
 
-ul, ol {
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #e8491d;
+    margin-top: 10px;
+}
+
+section p, li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ol, ul {
     padding-left: 20px;
 }
 
@@ -76,39 +109,44 @@ pre {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Buttons */
 .copy-button {
     background-color: #e8491d;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .copy-button:hover {
     background-color: #cf3d15;
+    transform: translateY(-2px);
 }
 
+/* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    position: relative;
-    width: 100%;
 }
 
 footer .social-icons {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 footer .social-icons a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     transition: color 0.3s ease;
 }
 
@@ -117,6 +155,24 @@ footer .social-icons a:hover {
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
+}
+
+/* Additions for better UI */
+section ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    list-style: none;
+    position: relative;
+}
+
+section ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #e8491d;
+    font-weight: bold;
+    font-size: 1.5rem;
+    top: -3px;
 }
