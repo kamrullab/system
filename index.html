@@ -28,14 +28,14 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
 </head>
 <body>
 
-    <header class="bg-dark text-white py-5">
+    <header class="bg-gradient text-white py-5">
         <div class="container text-center">
             <h1>Comprehensive System Information Script</h1>
             <p class="lead">Created by Kamrul Hossain</p>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">System Info</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,55 +57,75 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
     <main class="py-5">
         <div class="container">
             <section id="getting-started" class="mb-5">
-                <h2 class="section-title">Getting Started</h2>
-                <p class="lead">This script works on <strong>Windows</strong> operating systems. You need <strong>Administrator privileges</strong> to access all system details. The script utilizes WMIC (Windows Management Instrumentation Command-line).</p>
-                <h3>How to Use</h3>
-                <ol class="lead">
-                    <li>Press <code>Ctrl + R</code> on your keyboard to open the <strong>Run</strong> dialog box.</li>
-                    <li>Type <code>cmd</code> and press <strong>Enter</strong> to open the Command Prompt.</li>
-                    <li>Right-click on the Command Prompt icon and select <strong>"Run as Administrator"</strong> for full access.</li>
-                    <li>Click the button below to copy the command.</li>
-                </ol>
-                <button id="copy-btn" class="btn btn-danger btn-lg btn-block mt-3" onclick="copyCommand()">Copy Command</button>
+                <div class="card shadow-sm bg-light rounded">
+                    <div class="card-body">
+                        <h2 class="section-title">Getting Started</h2>
+                        <p class="lead">This script works on <strong>Windows</strong> operating systems. You need <strong>Administrator privileges</strong> to access all system details. The script utilizes WMIC (Windows Management Instrumentation Command-line).</p>
+                        <h3>How to Use</h3>
+                        <ol class="lead">
+                            <li>Press <code>Ctrl + R</code> on your keyboard to open the <strong>Run</strong> dialog box.</li>
+                            <li>Type <code>cmd</code> and press <strong>Enter</strong> to open the Command Prompt.</li>
+                            <li>Right-click on the Command Prompt icon and select <strong>"Run as Administrator"</strong> for full access.</li>
+                            <li>Click the button below to copy the command.</li>
+                        </ol>
+                        <button id="copy-btn" class="btn btn-danger btn-lg btn-block mt-3" onclick="copyCommand()">Copy Command</button>
+                    </div>
+                </div>
             </section>
 
             <section id="system-information-extracted" class="mb-5">
-                <h2 class="section-title">System Information Extracted</h2>
-                <ul class="list-group shadow-sm">
-                    <li class="list-group-item"><strong>CPU Information:</strong> CPU Name, Maximum Clock Speed, Architecture, Number of Physical Cores, Logical Processors, Voltage, L2 and L3 Cache Sizes.</li>
-                    <li class="list-group-item"><strong>Memory Information:</strong> RAM Capacity, Speed, Manufacturer, Part Number.</li>
-                    <li class="list-group-item"><strong>Disk Information:</strong> Disk Model, Size, Status, Partitions, Plug and Play Device ID, Volume Name, Serial Number.</li>
-                    <li class="list-group-item"><strong>BIOS Information:</strong> BIOS Release Date, Serial Number, Version, Current BIOS Voltage.</li>
-                    <li class="list-group-item"><strong>Graphics Information:</strong> GPU Name, Adapter RAM, Driver Version, Video Processor.</li>
-                    <li class="list-group-item"><strong>Battery Information:</strong> Battery Name, Charge Percentage, Design Capacity, Full Charge Capacity, Expected Battery Life, Time to Full Charge.</li>
-                    <li class="list-group-item"><strong>Network Information:</strong> Adapter Name, Speed, MAC Address, Packets Sent/Received.</li>
-                    <li class="list-group-item"><strong>USB Information:</strong> USB Device ID, Manufacturer, Status.</li>
-                    <li class="list-group-item"><strong>Hotfix and Update Information:</strong> Hotfix ID, Description, Installed On (Date).</li>
-                    <li class="list-group-item"><strong>Process Information:</strong> Process Name, ID, Thread Count, Memory Usage.</li>
-                    <li class="list-group-item"><strong>Miscellaneous:</strong> System Manufacturer, Model, Type, Last Boot Time, Boot Device, Thermal State.</li>
-                </ul>
+                <div class="card shadow-sm bg-light rounded">
+                    <div class="card-body">
+                        <h2 class="section-title">System Information Extracted</h2>
+                        <ul class="list-group shadow-sm">
+                            <li class="list-group-item"><strong>CPU Information:</strong> CPU Name, Maximum Clock Speed, Architecture, Number of Physical Cores, Logical Processors, Voltage, L2 and L3 Cache Sizes.</li>
+                            <li class="list-group-item"><strong>Memory Information:</strong> RAM Capacity, Speed, Manufacturer, Part Number.</li>
+                            <li class="list-group-item"><strong>Disk Information:</strong> Disk Model, Size, Status, Partitions, Plug and Play Device ID, Volume Name, Serial Number.</li>
+                            <li class="list-group-item"><strong>BIOS Information:</strong> BIOS Release Date, Serial Number, Version, Current BIOS Voltage.</li>
+                            <li class="list-group-item"><strong>Graphics Information:</strong> GPU Name, Adapter RAM, Driver Version, Video Processor.</li>
+                            <li class="list-group-item"><strong>Battery Information:</strong> Battery Name, Charge Percentage, Design Capacity, Full Charge Capacity, Expected Battery Life, Time to Full Charge.</li>
+                            <li class="list-group-item"><strong>Network Information:</strong> Adapter Name, Speed, MAC Address, Packets Sent/Received.</li>
+                            <li class="list-group-item"><strong>USB Information:</strong> USB Device ID, Manufacturer, Status.</li>
+                            <li class="list-group-item"><strong>Hotfix and Update Information:</strong> Hotfix ID, Description, Installed On (Date).</li>
+                            <li class="list-group-item"><strong>Process Information:</strong> Process Name, ID, Thread Count, Memory Usage.</li>
+                            <li class="list-group-item"><strong>Miscellaneous:</strong> System Manufacturer, Model, Type, Last Boot Time, Boot Device, Thermal State.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="redirecting-output" class="mb-5">
-                <h2 class="section-title">Redirecting Output</h2>
-                <p>To save the output to a text file, run the following command:</p>
-                <pre><code>scriptname.bat > systeminfo.txt</code></pre>
+                <div class="card shadow-sm bg-light rounded">
+                    <div class="card-body">
+                        <h2 class="section-title">Redirecting Output</h2>
+                        <p>To save the output to a text file, run the following command:</p>
+                        <pre><code>scriptname.bat > systeminfo.txt</code></pre>
+                    </div>
+                </div>
             </section>
 
             <section id="contact" class="mb-5">
-                <h2 class="section-title">Contact</h2>
-                <p><strong>Kamrul Hossain</strong></p>
-                <p>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
+                <div class="card shadow-sm bg-light rounded">
+                    <div class="card-body">
+                        <h2 class="section-title">Contact</h2>
+                        <p><strong>Kamrul Hossain</strong></p>
+                        <p>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
+                    </div>
+                </div>
             </section>
 
             <section id="license">
-                <h2 class="section-title">License</h2>
-                <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more details.</p>
+                <div class="card shadow-sm bg-light rounded">
+                    <div class="card-body">
+                        <h2 class="section-title">License</h2>
+                        <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more details.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-gradient-dark text-white py-4">
         <div class="container text-center">
             <div class="social-icons mb-3">
                 <a href="https://www.facebook.com/elitekamrul" target="_blank" class="text-white mr-3"><i class="fab fa-facebook fa-2x"></i></a>
