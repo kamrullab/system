@@ -108,8 +108,33 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
                 <div class="card shadow-sm bg-light rounded">
                     <div class="card-body">
                         <h2 class="section-title">Contact</h2>
-                        <p><strong>Kamrul Hossain</strong></p>
-                        <p>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h5><i class="fas fa-user mr-2"></i>Kamrul Hossain</h5>
+                                <p><i class="fas fa-envelope mr-2"></i>Email: kamrul@example.com</p>
+                                <p><i class="fab fa-facebook mr-2"></i>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
+                                <p><i class="fab fa-linkedin mr-2"></i>LinkedIn: <a href="https://www.linkedin.com" target="_blank">Kamrul Hossain</a></p>
+                                <p><i class="fab fa-github mr-2"></i>GitHub: <a href="https://github.com" target="_blank">Kamrul's GitHub</a></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-envelope-open-text mr-2"></i>Send a Message</h5>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                                        <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
