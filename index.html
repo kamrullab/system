@@ -7,6 +7,8 @@
     <meta name="description" content="Comprehensive System Information Script">
     <title>Comprehensive System Info Script</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script>
         // Function to copy command to clipboard
         function copyCommand() {
@@ -48,7 +50,7 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
                 <li>Right-click on the Command Prompt icon and select <strong>"Run as Administrator"</strong> for full access.</li>
                 <li>Click the button below to copy the command.</li>
             </ol>
-            <button onclick="copyCommand()">Copy Command</button>
+            <button class="copy-button" onclick="copyCommand()">Copy Command</button>
         </section>
 
         <section id="system-information-extracted">
@@ -87,6 +89,12 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
     </main>
 
     <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/elitekamrul" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
         <p>&copy; 2024 Kamrul Hossain - All rights reserved</p>
     </footer>
 
