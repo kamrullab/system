@@ -7,6 +7,10 @@
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #000000 100%);
 }
 
+.bg-custom {
+    background: linear-gradient(135deg, #4a90e2 0%, #50a5f1 50%, #7f8c8d 100%);
+}
+
 /* Section Title */
 h2.section-title {
     font-size: 2.2rem;
@@ -40,6 +44,41 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
     color: #f16529;
+}
+
+/* Contact section icons and form styling */
+#contact h5 {
+    color: #e8491d;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+}
+
+#contact i {
+    color: #e8491d;
+    margin-right: 10px;
+}
+
+#contact form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#contact button {
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #cf3d15;
 }
 
 /* Responsive adjustments */
