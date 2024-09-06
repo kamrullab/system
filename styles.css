@@ -1,178 +1,41 @@
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
-.container {
-    width: 85%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header */
-header {
-    background: #333;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.5rem;
-    color: #e8491d;
-    margin-top: 10px;
-}
-
-/* Navigation */
-nav {
-    background: #35424a;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1.2rem;
+/* General Styling for the Website */
+h2 {
+    font-size: 2.2rem;
     font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: #e8491d;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-/* Main content */
-main {
-    padding: 20px 0;
-}
-
-section h2 {
     color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: #e8491d;
-    margin-top: 10px;
-}
-
-section p, li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-ol, ul {
-    padding-left: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 10px;
 }
 
 pre {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    overflow-x: auto;
+    background: #f8f9fa;
+    color: #343a40;
+    padding: 15px;
+    font-size: 1rem;
     border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
-/* Buttons */
-.copy-button {
-    background-color: #e8491d;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: background 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    margin-top: 10px;
+ul.list-group li {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
 }
 
-.copy-button:hover {
-    background-color: #cf3d15;
-    transform: translateY(-2px);
+ul.list-group li:hover {
+    background-color: #f1f1f1;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-}
-
-footer .social-icons {
-    margin-bottom: 15px;
+.btn-lg {
+    font-size: 1.5rem;
+    padding: 15px 30px;
 }
 
 footer .social-icons a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.8rem;
     transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
     color: #e8491d;
-}
-
-footer p {
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-/* Additions for better UI */
-section ul li {
-    margin-bottom: 10px;
-    padding-left: 10px;
-    list-style: none;
-    position: relative;
-}
-
-section ul li::before {
-    content: "\2022";
-    position: absolute;
-    left: 0;
-    color: #e8491d;
-    font-weight: bold;
-    font-size: 1.5rem;
-    top: -3px;
 }
