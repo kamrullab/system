@@ -35,13 +35,14 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
         <div class="container">
+            <a class="navbar-brand" href="#">System Info</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="#getting-started">Getting Started</a></li>
                     <li class="nav-item"><a class="nav-link" href="#system-information-extracted">System Info</a></li>
                     <li class="nav-item"><a class="nav-link" href="#usage">Usage</a></li>
@@ -56,21 +57,21 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
     <main class="py-5">
         <div class="container">
             <section id="getting-started" class="mb-5">
-                <h2>Getting Started</h2>
-                <p>This script works on <strong>Windows</strong> operating systems. You need <strong>Administrator privileges</strong> to access all system details. The script utilizes WMIC (Windows Management Instrumentation Command-line).</p>
+                <h2 class="section-title">Getting Started</h2>
+                <p class="lead">This script works on <strong>Windows</strong> operating systems. You need <strong>Administrator privileges</strong> to access all system details. The script utilizes WMIC (Windows Management Instrumentation Command-line).</p>
                 <h3>How to Use</h3>
-                <ol>
+                <ol class="lead">
                     <li>Press <code>Ctrl + R</code> on your keyboard to open the <strong>Run</strong> dialog box.</li>
                     <li>Type <code>cmd</code> and press <strong>Enter</strong> to open the Command Prompt.</li>
                     <li>Right-click on the Command Prompt icon and select <strong>"Run as Administrator"</strong> for full access.</li>
                     <li>Click the button below to copy the command.</li>
                 </ol>
-                <button id="copy-btn" class="btn btn-danger btn-lg" onclick="copyCommand()">Copy Command</button>
+                <button id="copy-btn" class="btn btn-danger btn-lg btn-block mt-3" onclick="copyCommand()">Copy Command</button>
             </section>
 
             <section id="system-information-extracted" class="mb-5">
-                <h2>System Information Extracted</h2>
-                <ul class="list-group">
+                <h2 class="section-title">System Information Extracted</h2>
+                <ul class="list-group shadow-sm">
                     <li class="list-group-item"><strong>CPU Information:</strong> CPU Name, Maximum Clock Speed, Architecture, Number of Physical Cores, Logical Processors, Voltage, L2 and L3 Cache Sizes.</li>
                     <li class="list-group-item"><strong>Memory Information:</strong> RAM Capacity, Speed, Manufacturer, Part Number.</li>
                     <li class="list-group-item"><strong>Disk Information:</strong> Disk Model, Size, Status, Partitions, Plug and Play Device ID, Volume Name, Serial Number.</li>
@@ -86,19 +87,19 @@ systeminfo & wmic bios get releasedate,serialnumber,version & wmic cpu get name,
             </section>
 
             <section id="redirecting-output" class="mb-5">
-                <h2>Redirecting Output</h2>
+                <h2 class="section-title">Redirecting Output</h2>
                 <p>To save the output to a text file, run the following command:</p>
                 <pre><code>scriptname.bat > systeminfo.txt</code></pre>
             </section>
 
             <section id="contact" class="mb-5">
-                <h2>Contact</h2>
+                <h2 class="section-title">Contact</h2>
                 <p><strong>Kamrul Hossain</strong></p>
                 <p>Facebook: <a href="https://www.facebook.com/elitekamrul" target="_blank">elitekamrul</a></p>
             </section>
 
             <section id="license">
-                <h2>License</h2>
+                <h2 class="section-title">License</h2>
                 <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more details.</p>
             </section>
         </div>
